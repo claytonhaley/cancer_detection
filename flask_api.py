@@ -7,7 +7,6 @@ Created on Mon Dec 20
 from flask import Flask, request, render_template
 import numpy as np
 import pickle
-import config
 # import flasgger
 # from flasgger import Swagger
 
@@ -68,4 +67,4 @@ def predict_breast_cancer():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host="0.0.0.0", port=config.PORT, debug=config.DEBUG_MODE)
+    app.run(host="0.0.0.0", port=8080, debug=1)
