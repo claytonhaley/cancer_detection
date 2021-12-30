@@ -16,7 +16,7 @@
 	<h1>Predict Insurance Bill</h1>
 
      <!-- Form to enter new data for predictions  -->
-    <form action="{{ url_for('predict')}}"method="POST">
+    <form action="{{ url_for('predict_breast_cancer')}}"method="POST">
       <input type="text" name="mean_radius" placeholder="Mean Radius" required="required" /><br>
     	<input type="text" name="mean_texture" placeholder="Mean Texture" required="required" /><br>
         <input type="text" name="mean_perimeter" placeholder="Mean Perimeter" required="required" /><br>

@@ -7,6 +7,7 @@ Created on Mon Dec 20
 from flask import Flask, request, render_template
 import numpy as np
 import pickle
+import config
 # import flasgger
 # from flasgger import Swagger
 
@@ -21,7 +22,7 @@ classifier = pickle.load(pickle_in)
 def welcome():
     return render_template("home.html")
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def predict_breast_cancer():
 
     # """ Let's classifiy whether a patient has breast cancer or not
@@ -67,4 +68,4 @@ def predict_breast_cancer():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='0.0.0.0', port=config.PORT, debug=config.DEBUG_MODE)
+    app.run(host="0.0.0.0", port=config.PORT, debug=config.DEBUG_MODE)
